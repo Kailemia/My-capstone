@@ -3,40 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QUAN - Premium Crypto Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        body {
+            background-image: url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide {
+            animation: slide 15s linear infinite;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
 </head>
-<body class="bg-cyan-800">
-    <nav class="p-2 bg-white shadow md:flex md:items-center md:justify-between">
-        <div class="flex justify-between items-center">
-            <span class="text-2xl font-[poppins] cursor-pointer">
-                <img class="h-10 w-10 inline" src="assets/[CITYPNG.COM]HD Blue BTC Bitcoin Crypto Blockchain Coin Icon PNG - 2000x2000.png">Crypto Qwan
-            </span>
-            <span class="text-3xl cursor-pointer mx-2 md:hidden block"><ion-icon name="menu-" onclick="Menu(this)"></ion-icon>
+<body class="text-white font-sans">
+    <!-- overlay -->
+    <div class="overlay"></div>
 
-            </span>
-
+    <!-- Navbar blurred background -->
+    <nav class="fixed w-full top-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                    QUAN
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Home</a>
+                    <a href="#market" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Market</a>
+                    <a href="#wallet" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Wallet</a>
+                    <a href="#transactions" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Transactions</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:text-amber-400 transition duration-300">Home</a>
+                <a href="#market" class="block py-2 hover:text-amber-400 transition duration-300">Market</a>
+                <a href="#wallet" class="block py-2 hover:text-amber-400 transition duration-300">Wallet</a>
+                <a href="#transactions" class="block py-2 hover:text-amber-400 transition duration-300">Transactions</a>
+            </div>
         </div>
-
-        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-cyan-800 duration-500">Home</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-cyan-800 duration-500">Market</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-cyan-800 duration-500">Wallet</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-xl hover:text-cyan-800 duration-500">Transactions</a>
-            </li>
-
-            <button class="bg-cyan-400 text-white text-xl font-[poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">Register Now</button>
-        </ul>
-
     </nav>
-    
+
+    <!-- Hero Section (Home) -->
+    <section id="home" class="pt-24 pb-16 px-4 container mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+            <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">QUAN</span> Crypto Platform
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in">Platinum-class trading experience</p>
+        <button class="bg-gradient-to-r from-amber-400 to-amber-600 px-6 py-3 rounded-lg hover:scale-105 transition transform duration-300">
+            Start Trading
+        </button>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            Testimonials
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300">
+                <div class="flex mb-4 text-amber-400">★★★★★</div>
+                <p class="text-gray-300 mb-4">"QUAN offers the smoothest trading experience I've ever had!"</p>
+                <p class="font-semibold text-amber-200">- Alex K.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300">
+                <div class="flex mb-4 text-amber-400">★★★★★</div>
+                <p class="text-gray-300 mb-4">"Secure wallet and fast transactions. Absolutely premium!"</p>
+                <p class="font-semibold text-amber-200">- Maria S.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300">
+                <div class="flex mb-4 text-amber-400">★★★★☆</div>
+                <p class="text-gray-300 mb-4">"Market insights are spot-on. Great platform!"</p>
+                <p class="font-semibold text-amber-200">- James L.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crypto Icons Section -->
+    <section class="py-16 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            Supported Cryptocurrencies
+        </h2>
+        <div class="overflow-hidden">
+            <div class="flex animate-slide">
+                <img src="assets/bitcoin.png" alt="Bitcoin" class="w-12 h-12 mx-4">
+                <img src="assets/ethereum.png" alt="Ethereum" class="w-12 h-12 mx-4">
+                <img src="assets/litecoin.png" alt="Litecoin" class="w-12 h-12 mx-4">
+                <img src="assets/Ripple.png" alt="Ripple" class="w-12 h-12 mx-4">
+                <img src="assets/dogecoin.png" alt="Dogecoin" class="w-12 h-12 mx-4">
+                <img src="assets/bitcoin.png" alt="Bitcoin" class="w-12 h-12 mx-4">
+                <img src="assets/ethereum.png" alt="Ethereum" class="w-12 h-12 mx-4">
+                <img src="assets/litecoin.png" alt="Litecoin" class="w-12 h-12 mx-4">
+                <img src="assets/Ripple.png" alt="Ripple" class="w-12 h-12 mx-4">
+                <img src="assets/dogecoin.png" alt="Dogecoin" class="w-12 h-12 mx-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Section -->
+    <section id="market" class="py-16 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            Crypto Market Overview
+        </h2>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left bg-gray-800 bg-opacity-50 rounded-xl backdrop-blur-sm">
+                <thead class="bg-gradient-to-r from-amber-800 to-amber-700">
+                    <tr>
+                        <th class="p-4">Coin</th>
+                        <th class="p-4">Price</th>
+                        <th class="p-4">24h Change</th>
+                        <th class="p-4">Volume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/24" alt="Bitcoin" class="w-6 h-6 mr-2"> Bitcoin (BTC)
+                        </td>
+                        <td class="p-4">$62,345.12</td>
+                        <td class="p-4 text-green-400">+2.34%</td>
+                        <td class="p-4">$1.2B</td>
+                    </tr>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/24" alt="Ethereum" class="w-6 h-6 mr-2"> Ethereum (ETH)
+                        </td>
+                        <td class="p-4">$2,987.65</td>
+                        <td class="p-4 text-red-400">-0.87%</td>
+                        <td class="p-4">$780M</td>
+                    </tr>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/24" alt="Litecoin" class="w-6 h-6 mr-2"> Litecoin (LTC)
+                        </td>
+                        <td class="p-4">$82.14</td>
+                        <td class="p-4 text-green-400">+1.56%</td>
+                        <td class="p-4">$245M</td>
+                    </tr>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/24" alt="Ripple" class="w-6 h-6 mr-2"> Ripple (XRP)
+                        </td>
+                        <td class="p-4">$0.54</td>
+                        <td class="p-4 text-green-400">+3.12%</td>
+                        <td class="p-4">$320M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Wallet Section -->
+  
 </body>
 </html>
