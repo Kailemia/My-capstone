@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(assets/[CITYPNG.COM]HD\ Blue\ BTC\ Bitcoin\ Crypto\ Blockchain\ Coin\ Icon\ PNG\ -\ 2000x2000.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+}

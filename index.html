@@ -7,12 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-image: url('https://via.placeholder.com/1920x1080');
+            background-image: url('assets/pexels-worldspectrum-844124.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             min-height: 100vh;
+            background-color: #1F1A17; /* Fallback color */
         }
         .overlay {
             background-color: rgba(0, 0, 0, 0.5);
@@ -40,10 +41,10 @@
     </style>
 </head>
 <body class="text-white font-sans">
-    <!-- overlay -->
+    <!-- Overlay -->
     <div class="overlay"></div>
 
-    <!-- Navbar blurred background -->
+    <!-- Navbar -->
     <nav class="fixed w-full top-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
@@ -145,7 +146,7 @@
                 <tbody>
                     <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
                         <td class="p-4 flex items-center">
-                            <img src="https://via.placeholder.com/24" alt="Bitcoin" class="w-6 h-6 mr-2"> Bitcoin (BTC)
+                            <img src="assets/bitcoin.png" alt="Bitcoin" class="w-6 h-6 mr-2"> Bitcoin (BTC)
                         </td>
                         <td class="p-4">$62,345.12</td>
                         <td class="p-4 text-green-400">+2.34%</td>
@@ -153,7 +154,7 @@
                     </tr>
                     <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
                         <td class="p-4 flex items-center">
-                            <img src="https://via.placeholder.com/24" alt="Ethereum" class="w-6 h-6 mr-2"> Ethereum (ETH)
+                            <img src="assets/ethereum.png" alt="Ethereum" class="w-6 h-6 mr-2"> Ethereum (ETH)
                         </td>
                         <td class="p-4">$2,987.65</td>
                         <td class="p-4 text-red-400">-0.87%</td>
@@ -161,7 +162,7 @@
                     </tr>
                     <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
                         <td class="p-4 flex items-center">
-                            <img src="https://via.placeholder.com/24" alt="Litecoin" class="w-6 h-6 mr-2"> Litecoin (LTC)
+                            <img src="assets/litecoin.png" alt="Litecoin" class="w-6 h-6 mr-2"> Litecoin (LTC)
                         </td>
                         <td class="p-4">$82.14</td>
                         <td class="p-4 text-green-400">+1.56%</td>
@@ -169,7 +170,7 @@
                     </tr>
                     <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
                         <td class="p-4 flex items-center">
-                            <img src="https://via.placeholder.com/24" alt="Ripple" class="w-6 h-6 mr-2"> Ripple (XRP)
+                            <img src="assets/Ripple.png" alt="Ripple" class="w-6 h-6 mr-2"> Ripple (XRP)
                         </td>
                         <td class="p-4">$0.54</td>
                         <td class="p-4 text-green-400">+3.12%</td>
@@ -181,6 +182,160 @@
     </section>
 
     <!-- Wallet Section -->
-  
+    <section id="wallet" class="py-16 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            Your Wallet
+        </h2>
+        <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm mb-8 animate-fade-in">
+            <h3 class="text-2xl font-semibold mb-4">Total Balance</h3>
+            <p class="text-4xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">$75,432.89</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300 animate-fade-in">
+                <div class="flex items-center">
+                    <img src="assets/bitcoin.png" alt="Bitcoin" class="w-6 h-6 mr-2">
+                    <p class="font-semibold">Bitcoin (BTC)</p>
+                </div>
+                <p class="text-gray-300 mt-2">1.23 BTC ($62,345.12)</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300 animate-fade-in">
+                <div class="flex items-center">
+                    <img src="assets/ethereum.png" alt="Ethereum" class="w-6 h-6 mr-2">
+                    <p class="font-semibold">Ethereum (ETH)</p>
+                </div>
+                <p class="text-gray-300 mt-2">10.5 ETH ($2,987.65)</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300 animate-fade-in">
+                <div class="flex items-center">
+                    <img src="assets/litecoin.png" alt="Litecoin" class="w-6 h-6 mr-2">
+                    <p class="font-semibold">Litecoin (LTC)</p>
+                </div>
+                <p class="text-gray-300 mt-2">50 LTC ($82.14)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transactions Section -->
+    <section id="transactions" class="py-16 px-4 container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            Recent Transactions
+        </h2>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left bg-gray-800 bg-opacity-50 rounded-xl backdrop-blur-sm">
+                <thead class="bg-gradient-to-r from-amber-800 to-amber-700">
+                    <tr>
+                        <th class="p-4">Date</th>
+                        <th class="p-4">Type</th>
+                        <th class="p-4">Amount</th>
+                        <th class="p-4">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4">Mar 22, 2025</td>
+                        <td class="p-4">Deposit</td>
+                        <td class="p-4">0.5 BTC ($31,172.56)</td>
+                        <td class="p-4 text-green-400">Completed</td>
+                    </tr>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4">Mar 21, 2025</td>
+                        <td class="p-4">Withdrawal</td>
+                        <td class="p-4">5 ETH ($14,938.25)</td>
+                        <td class="p-4 text-yellow-400">Pending</td>
+                    </tr>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4">Mar 20, 2025</td>
+                        <td class="p-4">Trade</td>
+                        <td class="p-4">20 LTC ($1,642.80)</td>
+                        <td class="p-4 text-green-400">Completed</td>
+                    </tr>
+                    <tr class="hover:scale-[1.02] transition transform duration-300 animate-fade-in">
+                        <td class="p-4">Mar 19, 2025</td>
+                        <td class="p-4">Deposit</td>
+                        <td class="p-4">100 XRP ($54.00)</td>
+                        <td class="p-4 text-green-400">Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer (Binance-style) -->
+    <footer class="py-12 px-4 bg-gray-900 bg-opacity-80 backdrop-blur-md text-gray-400">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About QUAN -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">About QUAN</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Our Mission</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Team</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Careers</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Press</a></li>
+                </ul>
+            </div>
+            <!-- Products -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Products</h3>
+                <ul class="space-y-2">
+                    <li><a href="#market" class="hover:text-amber-400 transition duration-300">Spot Trading</a></li>
+                    <li><a href="#wallet" class="hover:text-amber-400 transition duration-300">Wallet</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Futures</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Staking</a></li>
+                </ul>
+            </div>
+            <!-- Support -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Support</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Help Center</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">FAQ</a></li>
+                    <li><a href="#" class="hover:text-amber-400 transition duration-300">Fees</a></li>
+                </ul>
+            </div>
+            <!-- Community -->
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Community</h3>
+                <div class="flex space-x-4 mb-4">
+                    <a href="#" class="hover:text-amber-400 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-400 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
+                    </a>
+                    <a href="#" class="hover:text-amber-400 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.4 3.58 8.06 8.18 9.5v-6.7H7.7v-2.8h2.52V9.7c0-2.5 1.5-3.86 3.78-3.86 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.62.76-1.62 1.54v1.86h2.76l-.44 2.8h-2.32V21c4.6-1.44 8.18-5.1 8.18-9.96C21.96 6.5 17.5 2.04 12 2.04z"></path></svg>
+                    </a>
+                </div>
+                <p class="text-sm">Email: support@quan.com</p>
+                <p class="text-sm">Phone: +254 790937780</p>
+            </div>
+        </div>
+        <div class="container mx-auto mt-8 text-center border-t border-gray-700 pt-4 text-sm">
+            <p>© 2025 QUAN. All rights reserved.</p>
+            <p class="mt-2">Risk Warning: Trading cryptocurrencies involves significant risk and can result in the loss of your capital.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Animations -->
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+    </style>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
