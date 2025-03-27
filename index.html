@@ -48,11 +48,11 @@
     <nav class="fixed w-full top-0 bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                <a href="index.html" class="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
                     QUAN
-                </div>
+                </a>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Home</a>
+                    <a href="index.html" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Home</a>
                     <a href="#market" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Market</a>
                     <a href="#wallet" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Wallet</a>
                     <a href="#transactions" class="hover:text-amber-400 transition duration-300 ease-in-out transform hover:-translate-y-1">Transactions</a>
@@ -64,7 +64,7 @@
                 </button>
             </div>
             <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
-                <a href="#home" class="block py-2 hover:text-amber-400 transition duration-300">Home</a>
+                <a href="index.html" class="block py-2 hover:text-amber-400 transition duration-300">Home</a>
                 <a href="#market" class="block py-2 hover:text-amber-400 transition duration-300">Market</a>
                 <a href="#wallet" class="block py-2 hover:text-amber-400 transition duration-300">Wallet</a>
                 <a href="#transactions" class="block py-2 hover:text-amber-400 transition duration-300">Transactions</a>
@@ -72,16 +72,19 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Home) -->
-    <section id="home" class="pt-24 pb-16 px-4 container mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">QUAN</span> Crypto Platform
-        </h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in">Platinum-class trading experience</p>
+   <!-- Hero Section (Home) -->
+<section id="home" class="pt-24 pb-16 px-4 container mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+        <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">QUAN</span> Crypto Platform
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 mb-8 animate-fade-in">Platinum-class trading experience</p>
+    <a href="form.html">
         <button class="bg-gradient-to-r from-amber-400 to-amber-600 px-6 py-3 rounded-lg hover:scale-105 transition transform duration-300">
-            Start Trading
+            Sign Up
         </button>
-    </section>
+    </a>
+</section>
+
 
     <!-- Testimonials Section -->
     <section class="py-16 px-4 container mx-auto">
@@ -90,19 +93,30 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/pexels-tome-louro-273270-1666779.jpg" alt="Maria S." class="w-10 h-10 rounded-full object-cover">
+                    <p class="font-semibold text-amber-200">James. T.</p>
+                </div>
+                <p class="text-gray-300 mb-4">"This is what I've been looking for!"</p>
                 <div class="flex mb-4 text-amber-400">★★★★★</div>
-                <p class="text-gray-300 mb-4">"QUAN offers the smoothest trading experience I've ever had!"</p>
-                <p class="font-semibold text-amber-200">- Alex K.</p>
             </div>
+            
             <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300">
-                <div class="flex mb-4 text-amber-400">★★★★★</div>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/pexels-pixabay-415829.jpg" alt="Maria S." class="w-10 h-10 rounded-full object-cover">
+                    <p class="font-semibold text-amber-200">Maria S.</p>
+                </div>
                 <p class="text-gray-300 mb-4">"Secure wallet and fast transactions. Absolutely premium!"</p>
-                <p class="font-semibold text-amber-200">- Maria S.</p>
+                <div class="flex mb-4 text-amber-400">★★★★★</div>
             </div>
+
             <div class="bg-gray-800 bg-opacity-50 p-6 rounded-xl backdrop-blur-sm hover:scale-105 transition transform duration-300">
-                <div class="flex mb-4 text-amber-400">★★★★☆</div>
-                <p class="text-gray-300 mb-4">"Market insights are spot-on. Great platform!"</p>
-                <p class="font-semibold text-amber-200">- James L.</p>
+                <div class="flex items-center space-x-3">
+                    <img src="assets/pexels-danxavier-1121796.jpg" alt="Maria S." class="w-10 h-10 rounded-full object-cover">
+                    <p class="font-semibold text-amber-200">Mack. A.</p>
+                </div>
+                <p class="text-gray-300 mb-4">"Fast transactions. I really love it!"</p>
+                <div class="flex mb-4 text-amber-400">★★★★★</div>
             </div>
         </div>
     </section>
@@ -337,5 +351,6 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
