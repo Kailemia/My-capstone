@@ -58,15 +58,10 @@
         </div>
     </nav>
 
-    <!-- Signup Form -->
+    <!-- Login Form -->
     <div class="flex items-center justify-center min-h-screen pt-24">
         <form action="submit_form.php" method="POST" class="max-w-md w-full bg-black bg-opacity-50 p-6 rounded-lg shadow-md">
             <h2 class="text-2xl font-bold mb-4 text-center">Sign Up</h2>
-        
-            <!-- Name Field -->
-            <label class="block mb-2 font-medium">Name</label>
-            <input type="text" name="name" required 
-                   class="w-full p-2 border border-gray-300 rounded-md bg-transparent text-white placeholder-gray-300 focus:ring focus:ring-amber-400">
         
             <!-- Email Field -->
             <label class="block mt-4 mb-2 font-medium">Email</label>
@@ -83,12 +78,12 @@
             <input type="password" name="confirm_password" required 
                    class="w-full p-2 border border-gray-300 rounded-md bg-transparent text-white placeholder-gray-300 focus:ring focus:ring-amber-400">
         
-            <!-- Submit Button -->
-            <button type="submit" 
-                    class="w-full mt-6 bg-gradient-to-r from-amber-400 to-amber-600 text-white py-2 rounded-lg hover:scale-105 transition transform duration-300">
-                Sign Up
-            </button>
-            <P class="mt-4 text-center">Already have an account? <a href="login.html" class="text-amber-400">Login</a></P>
+            <!-- Login Button -->
+            <div class="flex justify-center items-center mt-6">
+                <a href="index.html" class="bg-gradient-to-r from-amber-400 to-amber-600 px-6 py-3 rounded-lg hover:scale-105 transition transform duration-300 text-white text-center">
+                    Log in
+                </a>
+            </div>
         </form>
     </div>
 </body>
